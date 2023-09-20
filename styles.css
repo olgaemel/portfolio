@@ -1,0 +1,244 @@
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.4;
+  font-size: 30px;
+  color: var(--main-red);
+  font-style: normal;
+  font-weight: normal;
+  font-family: 'Poppins', sans-serif;
+}
+
+#navbar {
+  position: fixed;
+  background-color: var(--main-red);
+  display: flex;
+  justify-content: flex-end;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+
+#navbar ul {
+  display: flex;
+  flex-direction: row;
+  margin-right: 2rem;
+  list-style-type: none;
+}
+
+#navbar ul li a {
+  display: block;
+  font-size: 22px;
+  padding: 20px;
+  text-decoration: none;
+}
+
+#navbar ul li a:hover {
+  background-color: var(--main-blue);
+}
+
+h1 {
+  font-size: 60px;
+  color: var(--main-white);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700px;
+}
+
+p {
+  font-style: italic;
+}
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  background-image: linear-gradient(62deg, #3a3d40 0%, #181719 100%);
+}
+
+#projects {
+  background-color: var(--main-blue);
+  width: 100%;
+  padding: 5rem 2rem;
+  display: grid;
+  justify-content: center;
+}
+
+#projects h2 {
+  color: var(--main-white);
+  font-size: 42px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700px;
+
+  text-align: center;
+}
+
+.projects-header {
+  max-width: 640px;
+  margin: 0 auto 4rem auto;
+  border-bottom: 0.2rem solid var(--main-white);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, auto));
+  grid-gap: 3rem;
+  width: 90%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 3rem;
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+  display: block;
+}
+
+* a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+
+.project-title {
+  text-align: center;
+  background-color: var(--main-gray);
+  font-size: 20px;
+  padding: 20px;
+  font-style: normal;
+}
+
+.project-title:hover {
+  color: var(--main-red);
+  transition: color 0.3s ease-out;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  background-color: var(--main-gray);
+  font-size: 20px;
+  margin: 0 auto;
+}
+
+.btn:hover {
+  background-color: var(--main-red);
+  transition: background-color 0.3s ease-out;
+}
+
+#profile-link {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 100%;
+  background-color: var(--main-gray);
+  color: var(--main-white);
+  text-align: center;
+  padding: 0 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts-header h2 {
+  font-size: 60px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+}
+
+.contacts-header p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 18px;
+  font-style: italic;
+}
+
+.contacts-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 980px;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+}
+
+.contacts-links a {
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+.btn-contacts-details {
+  transition: transform 0.3s ease-out;
+}
+
+.btn-contacts-details:hover {
+  transform: translateY(8px);
+}
+
+.btn-contacts-details {
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+}
+
+footer {
+  font-weight: 300;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 2rem;
+  background: var(--main-gray);
+  border-top: 4px solid var(--main-red);
+}
+
+@media (max-width: 650px) {
+  h1 {
+    font-size: 40px;
+  }
+  #projects h2 {
+    font-size: 32px;
+    word-break: break-all;
+  }
+
+  .project-grid {
+    grid-gap: 1rem;
+    /* max-width: 100%; */
+    grid-template-columns: repeat(2, minmax(220px, auto));
+  }
+}
+
+@media (max-width: 430px) {
+  #projects h2 {
+    font-size: 32px;
+    word-break: break-all;
+  }
+
+  .project-grid {
+    grid-template-columns: minmax(280px, auto);
+  }
+
+  #navbar ul {
+    margin-right: 1rem;
+  }
+
+  #navbar ul li a {
+    font-size: 20px;
+    padding: 15px;
+  }
+}
